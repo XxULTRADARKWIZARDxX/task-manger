@@ -1,25 +1,41 @@
 {
   "expo": {
-    "name": "habit-grid-app",
+    "name": "Habit Grid",
     "slug": "habit-grid-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/habit-grid-icon.png",
+    "scheme": "habitgrid",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/habit-grid-splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFFFFF"
+    },
     "ios": {
+      "bundleIdentifier": "com.rickychen.habitgrid",
       "supportsTablet": true
     },
     "android": {
+      "package": "com.rickychen.habitgrid",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "backgroundColor": "#FFFFFF",
+        "foregroundImage": "./assets/habit-grid-android-foreground.png",
+        "monochromeImage": "./assets/habit-grid-android-monochrome.png"
       },
       "predictiveBackGestureEnabled": false
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "color": "#000000",
+          "defaultChannel": "habit-reminders"
+        }
+      ]
+    ]
   }
 }
